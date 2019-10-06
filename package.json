@@ -6,7 +6,8 @@
   "author": "Filip Bontin <filip.bontin@jayway.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
