@@ -25,7 +25,7 @@ xdescribe("no framework", () => {
     });
   }
 
-  for (let i = 0; i < 100; i += 1) {
+  /* for (let i = 0; i < 100; i += 1) {
     it(`When I add two numbers, the result should not depend on parameter order`, () => {
       const a = Math.floor(Math.random() * 100);
       const b = Math.floor(Math.random() * 100);
@@ -51,7 +51,7 @@ xdescribe("no framework", () => {
       const result2 = x;
       expect(result1).toEqual(result2);
     });
-  }
+  } */
 });
 
 describe("Fast-check", () => {
@@ -76,7 +76,8 @@ describe("Fast-check", () => {
     );
   });
 
-  it("Adding zero is the same as doing nothing", () => {
+  it.only("Adding zero is the same as doing nothing", () => {
+    const add = crappyAdd;
     fc.assert(
       fc.property(fc.integer(), x => {
         const result1 = add(x, 0);
